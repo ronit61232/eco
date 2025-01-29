@@ -86,3 +86,15 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
+
+document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission to demonstrate success message
+  // Display success message
+  document.getElementById('success-message').style.display = 'block';
+  
+  // Clear the input field and message after 4 seconds
+  setTimeout(function() {
+    document.querySelector('.email-field').value = ''; // Clear the email field
+    document.getElementById('success-message').style.display = 'none'; // Hide the success message
+  }, 4000); // 4 seconds delay
+});
